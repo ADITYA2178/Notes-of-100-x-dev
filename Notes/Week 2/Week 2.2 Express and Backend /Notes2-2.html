@@ -300,6 +300,12 @@
       <div class="request-row">Response Body - 2 + 2 is equal to 4</div>
       <div class="request-row">Status code - 200</div>
     </div>
+
+    <div class="annotations">
+      <h3>Important Note</h3>
+      <p>Backend can return HTML also, like <code>res.send("&lt;h1&gt;Hello World&lt;/h1&gt;")</code>, but it is usually not a good practice for APIs.</p>
+      <p>In most backend APIs, the server should return data, usually JSON, and the frontend should decide how to display it.</p>
+    </div>
   </div>
 
   <!-- Slide 11: HTTP Protocol - Browser Request Flow -->
