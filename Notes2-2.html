@@ -169,5 +169,57 @@
     </ol>
   </div>
 
+  <!-- Slide 7: HTTP Protocol -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+
+    <div class="protocol-summary">
+      <p>In the end, its the client throwing some information at a server</p>
+      <p>Server doing something with that information</p>
+      <p>Server responding back with the final result</p>
+    </div>
+
+    <p><strong>Think of them as functions, where</strong></p>
+    <ol>
+      <li>Arguments are something the client sends</li>
+      <li>Rather than calling a function using its name, the client uses a URL</li>
+      <li>Rather than the function body, the server does something with the request</li>
+      <li>Rather than the function returning a value, the server responds with some data</li>
+    </ol>
+  </div>
+
+  <!-- Slide 8: HTTP Protocol - Client Side -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+    <p><strong>Things client needs to worry about</strong></p>
+
+    <div class="diagram-note">
+      <div class="diagram-center">HTTP<br>Client side</div>
+
+      <div class="diagram-branches">
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Protocol</strong><br>(HTTP/HTTPS)</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Address</strong><br>(URL/IP/PORT)</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Route</strong></div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Headers</strong><br>Body<br>Query Params</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Method</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
