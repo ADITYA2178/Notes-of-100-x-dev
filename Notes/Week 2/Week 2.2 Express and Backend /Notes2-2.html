@@ -112,6 +112,16 @@
       JS was never meant to be run in the backend<br>
       Eventually became very popular and is a popular choice of runtime on the backend
     </p>
+
+    <div class="annotations">
+      <h3>Important Note</h3>
+      <p>
+        JavaScript runs on a single main thread, but Node.js uses asynchronous I/O for operations like database calls, file reads, and network requests.
+      </p>
+      <p>
+        Because these slow operations do not block the main thread, Node.js can keep accepting and handling multiple requests at the same time.
+      </p>
+    </div>
   </div>
 
   <!-- Slide 4: What is Bun? -->
