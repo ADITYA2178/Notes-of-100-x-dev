@@ -221,5 +221,61 @@
     </div>
   </div>
 
+  <!-- Slide 9: HTTP Protocol - Server Side -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+    <p><strong>Things server needs to worry about</strong></p>
+
+    <div class="diagram-note server-diagram">
+      <div class="diagram-center">HTTP<br>Server side</div>
+
+      <div class="diagram-branches server-branches">
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Response</strong><br>headers</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Response</strong><br>body</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Status</strong><br>codes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 10: HTTP Protocol - Communication Example -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+    <p><strong>Usually communication would happen like this</strong></p>
+
+    <div class="request-diagram">
+      <div class="client-bubble">Client</div>
+
+      <div class="request-details">
+        <div class="url-breakdown">
+          <div class="url-part">
+            <span class="url-label">Protocol</span>
+            <span class="url-value">https://</span>
+          </div>
+          <div class="url-part">
+            <span class="url-label">URL</span>
+            <span class="url-value">chat.openai.com</span>
+          </div>
+          <div class="url-part">
+            <span class="url-label">Route</span>
+            <span class="url-value">/backend-api/conversation</span>
+          </div>
+        </div>
+
+        <div class="request-row">Headers - Cookie - 123ase333SD3e/233</div>
+        <div class="request-row">Body - What is 2 + 2 (usually in JSON)</div>
+        <div class="request-row">Method: POST</div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
