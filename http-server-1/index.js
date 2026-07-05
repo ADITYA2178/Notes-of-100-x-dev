@@ -16,7 +16,8 @@ app.get("/request-handler", function(req, res) {
 })
 
 app.get('/', function(req, res) {
-    res.send(<h1>Hello World</h1>);
+
+    res.send('<h1>Hello World</h1>'); // This is a string
     // Backend can return html also 
 })
 
