@@ -218,6 +218,18 @@ h1 {
   margin: 0 auto;
 }
 
+.code-note {
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #e5e7eb;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
 @media (max-width: 700px) {
   .request-diagram {
     grid-template-columns: 1fr;

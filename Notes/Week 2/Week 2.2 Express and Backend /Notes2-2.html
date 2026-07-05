@@ -316,5 +316,45 @@
     </div>
   </div>
 
+  <!-- Slide 12: HTTP Protocol - fs Library -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+
+    <div class="protocol-summary">
+      <p>Do you remember the fs library?</p>
+      <p>We used to to read from a file</p>
+    </div>
+
+    <pre class="code-note"><code>let a = 1;
+console.log(a);
+
+fs.readFile("a.txt", "utf-8", (err, data) => {
+  console.log("data read from the file is ");
+  console.log(data);
+})
+
+let ans = 0;
+for (let i = 0; i&lt;100; i++) {
+  ans = ans + i;
+}
+console.log(ans);</code></pre>
+  </div>
+
+  <!-- Slide 13: HTTP Protocol - HTTP Server Libraries -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+
+    <div class="protocol-summary">
+      <p>Similarly, there are many libraries that let you create HTTP Servers</p>
+      <p>The most famous one is express</p>
+    </div>
+
+    <div class="annotations">
+      <h3>Exercise</h3>
+      <p>A great exercise to do is to create an HTTP server from scratch in C/C++</p>
+      <p>It is out of scope for this course, but if you're looking for a challenge</p>
+    </div>
+  </div>
+
 </body>
 </html>
