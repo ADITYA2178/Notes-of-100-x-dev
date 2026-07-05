@@ -66,5 +66,76 @@
 
   </div>
 
+  <!-- Slide 2: V8 Engine & Common JS Browser Engines -->
+  <div class="content-box">
+    <ol start="1">
+      <li>
+        <h2>V8 Engine</h2>
+        <p>
+          <strong>V8</strong> is an open-source JavaScript engine developed by the Chromium project for Google Chrome and Chromium web browsers. It's written in C++ and is responsible for compiling JavaScript code into native machine code before executing it, which greatly improves performance.
+        </p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="content-box">
+    <h2>Common JS Browser engines</h2>
+    <ol class="engine-list">
+      <li>
+        <strong>V8 - Used by google chrome/chromium - C</strong>
+        <a class="engine-url" href="https://github.com/v8/v8" target="_blank" rel="noopener noreferrer">https://github.com/v8/v8</a>
+        <span class="engine-browser">Google Chrome</span>
+      </li>
+      <li>
+        <strong>SpiderMonkey - Used by Firefox - C + Rust</strong>
+        <a class="engine-url" href="https://spidermonkey.dev/" target="_blank" rel="noopener noreferrer">https://spidermonkey.dev/</a>
+        <span class="engine-browser">Firefox</span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Slide 3: What is Node.js? -->
+  <ul class="topics">
+    <li>What is ECMAScript</li>
+    <li>What is Javascript?</li>
+    <li class="highlight">What is Node.js?</li>
+    <li>What is Bun?</li>
+  </ul>
+
+  <div class="content-box">
+    <h2>What is Node.js?</h2>
+    <p>
+      Some smart people took out the V8 engine<br>
+      Added some Backend things (filesystem reads) on top to create a new runtime to compete with BE languages like Java.
+    </p>
+    <p>
+      JS was never meant to be run in the backend<br>
+      Eventually became very popular and is a popular choice of runtime on the backend
+    </p>
+  </div>
+
+  <!-- Slide 4: What is Bun? -->
+  <ul class="topics">
+    <li>What is ECMAScript</li>
+    <li>What is Javascript?</li>
+    <li>What is Node.js?</li>
+    <li class="highlight">What is Bun?</li>
+  </ul>
+
+  <div class="content-box">
+    <h2>What is Bun?</h2>
+    <p>
+      Other than the fact that JS is single threaded, Node.js is slow (multiple reasons for it)
+    </p>
+    <p>
+      Some smart people said they wanted to re-write the JS runtime for the backend and introduced Bun
+    </p>
+    <ul>
+      <li><strong>It is a significantly faster runtime</strong></li>
+      <li><strong>It is written in Zig</strong></li>
+    </ul>
+    <a class="engine-url" href="https://github.com/oven-sh/bun" target="_blank" rel="noopener noreferrer">https://github.com/oven-sh/bun</a>
+  </div>
+
 </body>
 </html>

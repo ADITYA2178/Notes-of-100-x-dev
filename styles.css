@@ -68,6 +68,14 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.content-box p {
+  margin-bottom: 0.75rem;
+}
+
+.content-box p:last-child {
+  margin-bottom: 0;
+}
+
 strong {
   color: #fff;
 }
@@ -108,4 +116,31 @@ strong {
 .annotation-row .points-to {
   font-size: 0.9rem;
   color: #ccc;
+}
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.engine-list li {
+  margin-bottom: 1rem;
+}
+
+.engine-list .engine-url {
+  display: block;
+  font-family: "SF Mono", Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.engine-list .engine-browser {
+  display: block;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 0.25rem;
 }
