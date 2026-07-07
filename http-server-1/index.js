@@ -1,7 +1,12 @@
 const express = require('express');
-const port = 3000;
+const port = process.env.PORT || 3000;
 
+// process env port by using command clis export PORT=3001;
+
+const bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.json());
 
 
 app.get("/request-handler", function(req, res) {
@@ -30,6 +35,14 @@ app.get('/about', function(req,res){
         loveOfLife: "Ankusha",
         time: "5Months",
         location: "Aditya's Tent"
+    })
+});
+
+app.post('/add-todo', function(req, res) {
+    const todo = req.body.todo;
+    console.log(todo);
+    res.json({
+        message: "Todo added successfully"
     })
 })
 
