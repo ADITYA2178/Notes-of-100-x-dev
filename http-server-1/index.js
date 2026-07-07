@@ -21,6 +21,18 @@ app.get('/', function(req, res) {
     // Backend can return html also 
 })
 
+app.get('/about', function(req,res){
+    // const loveOfLife = req.query.loveOfLife;
+    // const time = req.query.time;
+    // const location = req.query.location;
+
+    res.json({
+        loveOfLife: "Ankusha",
+        time: "5Months",
+        location: "Aditya's Tent"
+    })
+})
+
 app.listen(port, function() {
     console.log(`Server is running on port ${port}`);
 })
