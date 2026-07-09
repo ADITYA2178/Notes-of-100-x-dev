@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ECMAScript, JavaScript, Node.js & Bun — Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Web Development Fundamentals — Notes</h1>
+
+  <!-- Main headings from the slide (left side) -->
+  <ul class="topics">
+    <li>What is ECMAScript</li>
+    <li class="highlight">What is Javascript?</li>
+    <li>What is Node.js?</li>
+    <li>What is Bun?</li>
+  </ul>
+
+  <!-- Detailed content box from the slide (right side) -->
+  <div class="content-box">
+
+    <ol>
+      <li>
+        <h2>ECMAScript: The Specification</h2>
+        <ul>
+          <li>
+            <strong>ECMAScript</strong> is a scripting language specification standardized by Ecma International in the ECMA-262 and ISO/IEC 16262 documents. It serves as the guideline or the 'rules' for scripting language design.
+          </li>
+          <li>
+            <strong>Versions:</strong> ECMAScript versions (like ES5, ES6/ES2015, ES2017, etc.) are essentially updates to the specification, introducing new features and syntaxes. For example, ES6 introduced arrow functions, classes, and template literals.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2>JavaScript: The Implementation</h2>
+        <ul>
+          <li>
+            <strong>JavaScript</strong> is a scripting language that conforms to the ECMAScript specification. It's the most widely known and used implementation of ECMAScript.
+          </li>
+          <li>
+            <strong>Beyond ECMAScript:</strong> JavaScript includes additional features that are not part of the ECMAScript specification, like the Document Object Model (DOM) manipulation, which is crucial for web development but is not defined by ECMAScript.
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- Annotations with arrows from the slide -->
+    <div class="annotations">
+      <h3>Examples (from slide annotations)</h3>
+
+      <div class="annotation-row">
+        <span class="terms">Date, var, const, let, function</span>
+        <span class="arrow">→</span>
+        <span class="points-to">Part of ECMAScript specification (JavaScript: The Implementation — first bullet)</span>
+      </div>
+
+      <div class="annotation-row">
+        <span class="terms">setTimeout<br>fs.readFile</span>
+        <span class="arrow">→</span>
+        <span class="points-to">Beyond ECMAScript — environment-specific features (Web APIs / Node.js APIs), not defined by ECMAScript</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Slide 2: V8 Engine & Common JS Browser Engines -->
+  <div class="content-box">
+    <ol start="1">
+      <li>
+        <h2>V8 Engine</h2>
+        <p>
+          <strong>V8</strong> is an open-source JavaScript engine developed by the Chromium project for Google Chrome and Chromium web browsers. It's written in C++ and is responsible for compiling JavaScript code into native machine code before executing it, which greatly improves performance.
+        </p>
+      </li>
+    </ol>
+  </div>
+
+  <div class="content-box">
+    <h2>Common JS Browser engines</h2>
+    <ol class="engine-list">
+      <li>
+        <strong>V8 - Used by google chrome/chromium - C</strong>
+        <a class="engine-url" href="https://github.com/v8/v8" target="_blank" rel="noopener noreferrer">https://github.com/v8/v8</a>
+        <span class="engine-browser">Google Chrome</span>
+      </li>
+      <li>
+        <strong>SpiderMonkey - Used by Firefox - C + Rust</strong>
+        <a class="engine-url" href="https://spidermonkey.dev/" target="_blank" rel="noopener noreferrer">https://spidermonkey.dev/</a>
+        <span class="engine-browser">Firefox</span>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Slide 3: What is Node.js? -->
+  <ul class="topics">
+    <li>What is ECMAScript</li>
+    <li>What is Javascript?</li>
+    <li class="highlight">What is Node.js?</li>
+    <li>What is Bun?</li>
+  </ul>
+
+  <div class="content-box">
+    <h2>What is Node.js?</h2>
+    <p>
+      Some smart people took out the V8 engine<br>
+      Added some Backend things (filesystem reads) on top to create a new runtime to compete with BE languages like Java.
+    </p>
+    <p>
+      JS was never meant to be run in the backend<br>
+      Eventually became very popular and is a popular choice of runtime on the backend
+    </p>
+
+    <div class="annotations">
+      <h3>Important Note</h3>
+      <p>
+        JavaScript runs on a single main thread, but Node.js uses asynchronous I/O for operations like database calls, file reads, and network requests.
+      </p>
+      <p>
+        Because these slow operations do not block the main thread, Node.js can keep accepting and handling multiple requests at the same time.
+      </p>
+    </div>
+  </div>
+
+  <!-- Slide 4: What is Bun? -->
+  <ul class="topics">
+    <li>What is ECMAScript</li>
+    <li>What is Javascript?</li>
+    <li>What is Node.js?</li>
+    <li class="highlight">What is Bun?</li>
+  </ul>
+
+  <div class="content-box">
+    <h2>What is Bun?</h2>
+    <p>
+      Other than the fact that JS is single threaded,<br>
+      Node.js is slow (multiple reasons for it)
+    </p>
+    <p>
+      Some smart people said they wanted to re-write the JS runtime for the backend and introduced Bun
+    </p>
+    <ul>
+      <li><strong>It is a significantly faster runtime</strong></li>
+      <li><strong>It is written in Zig</strong></li>
+    </ul>
+    <a class="engine-url" href="https://github.com/oven-sh/bun" target="_blank" rel="noopener noreferrer">https://github.com/oven-sh/bun</a>
+
+    <div class="annotations">
+      <h3>Note</h3>
+      <p><strong>CLI</strong> means <strong>Command Line Interface</strong></p>
+    </div>
+  </div>
+
+  <!-- Slide 5: What can you do with Node.js? -->
+  <div class="content-box">
+    <h2>What can you do with Node.js?</h2>
+    <ol>
+      <li>Create clis</li>
+      <li>Create a video player</li>
+      <li>Create a game</li>
+      <li>Create an <span class="highlight-text">HTTP Server</span></li>
+    </ol>
+  </div>
+
+  <!-- Slide 6: What is an HTTP Server? -->
+  <div class="content-box">
+    <h2>What is an HTTP Server?</h2>
+
+    <div class="http-acronym">
+      <strong>HTTP</strong>
+      <span>Hyper text transfer Protocol</span>
+    </div>
+
+    <ol>
+      <li>A protocol that is defined for machines to communicate</li>
+      <li>Specifically for websites, it is the most common way for your website's frontend to talk to its backend</li>
+    </ol>
+  </div>
+
+  <!-- Slide 7: HTTP Protocol -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+
+    <div class="protocol-summary">
+      <p>In the end, its the client throwing some information at a server</p>
+      <p>Server doing something with that information</p>
+      <p>Server responding back with the final result</p>
+    </div>
+
+    <p><strong>Think of them as functions, where</strong></p>
+    <ol>
+      <li>Arguments are something the client sends</li>
+      <li>Rather than calling a function using its name, the client uses a URL</li>
+      <li>Rather than the function body, the server does something with the request</li>
+      <li>Rather than the function returning a value, the server responds with some data</li>
+    </ol>
+  </div>
+
+  <!-- Slide 8: HTTP Protocol - Client Side -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+    <p><strong>Things client needs to worry about</strong></p>
+
+    <div class="diagram-note">
+      <div class="diagram-center">HTTP<br>Client side</div>
+
+      <div class="diagram-branches">
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Protocol</strong><br>(HTTP/HTTPS)</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Address</strong><br>(URL/IP/PORT)</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Route</strong></div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Headers</strong><br>Body<br>Query Params</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Method</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9: HTTP Protocol - Server Side -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+    <p><strong>Things server needs to worry about</strong></p>
+
+    <div class="diagram-note server-diagram">
+      <div class="diagram-center">HTTP<br>Server side</div>
+
+      <div class="diagram-branches server-branches">
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Response</strong><br>headers</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Response</strong><br>body</div>
+        </div>
+        <div class="diagram-item">
+          <span class="diagram-arrow">↓</span>
+          <div><strong>Status</strong><br>codes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 10: HTTP Protocol - Communication Example -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+    <p><strong>Usually communication would happen like this</strong></p>
+
+    <div class="request-diagram">
+      <div class="client-bubble">Client</div>
+
+      <div class="request-details">
+        <div class="url-breakdown">
+          <div class="url-part">
+            <span class="url-label">Protocol</span>
+            <span class="url-value">https://</span>
+          </div>
+          <div class="url-part">
+            <span class="url-label">URL</span>
+            <span class="url-value">chat.openai.com</span>
+          </div>
+          <div class="url-part">
+            <span class="url-label">Route</span>
+            <span class="url-value">/backend-api/conversation</span>
+          </div>
+        </div>
+
+        <div class="request-row">Headers - Cookie - 123ase333SD3e/233</div>
+        <div class="request-row">Body - What is 2 + 2 (usually in JSON)</div>
+        <div class="request-row">Method: POST</div>
+      </div>
+    </div>
+
+    <div class="communication-flow">
+      <span class="endpoint">Client</span>
+      <div class="flow-arrows">
+        <span>Client request → Server</span>
+        <span>Client ← Server response</span>
+      </div>
+      <span class="endpoint">Server</span>
+    </div>
+
+    <div class="response-details">
+      <div class="request-row">Response Headers - ---</div>
+      <div class="request-row">Response Body - 2 + 2 is equal to 4</div>
+      <div class="request-row">Status code - 200</div>
+    </div>
+
+    <div class="annotations">
+      <h3>Important Note</h3>
+      <p>Backend can return HTML also, like <code>res.send("&lt;h1&gt;Hello World&lt;/h1&gt;")</code>, but it is usually not a good practice for APIs.</p>
+      <p>In most backend APIs, the server should return data, usually JSON, and the frontend should decide how to display it.</p>
+    </div>
+  </div>
+
+  <!-- Slide 11: HTTP Protocol - Browser Request Flow -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+
+    <div class="protocol-summary">
+      <p>Things that happen in your browser</p>
+      <p>after you fire this request</p>
+      <p>(we will get to how to fire request to a backend server later)</p>
+    </div>
+
+    <ol>
+      <li>Browser parses the URL</li>
+      <li>Does a DNS Lookup (converts google.com to an IP)</li>
+      <li>Establishes a connection to the IP (does handshake...)</li>
+    </ol>
+
+    <div class="annotations">
+      <h3>What is DNS resolution</h3>
+      <p>URLs are just like contacts in your phone</p>
+      <p>In the end, they map to an IP</p>
+      <p>If you ever buy a URL of your own, you will need to point it to the IP of your server</p>
+    </div>
+  </div>
+
+  <!-- Slide 12: HTTP Protocol - fs Library -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+
+    <div class="protocol-summary">
+      <p>Do you remember the fs library?</p>
+      <p>We used to to read from a file</p>
+    </div>
+
+    <pre class="code-note"><code>let a = 1;
+console.log(a);
+
+fs.readFile("a.txt", "utf-8", (err, data) => {
+  console.log("data read from the file is ");
+  console.log(data);
+})
+
+let ans = 0;
+for (let i = 0; i&lt;100; i++) {
+  ans = ans + i;
+}
+console.log(ans);</code></pre>
+  </div>
+
+  <!-- Slide 13: HTTP Protocol - HTTP Server Libraries -->
+  <div class="content-box">
+    <h2>HTTP Protocol</h2>
+
+    <div class="protocol-summary">
+      <p>Similarly, there are many libraries that let you create HTTP Servers</p>
+      <p>The most famous one is express</p>
+    </div>
+
+    <div class="annotations">
+      <h3>Exercise</h3>
+      <p>A great exercise to do is to create an HTTP server from scratch in C/C++</p>
+      <p>It is out of scope for this course, but if you're looking for a challenge</p>
+    </div>
+
+    <div class="annotations">
+      <h3>Assignment</h3>
+      <ol>
+        <li>Create a simple HTTP server in C from scratch</li>
+        <li>Create a todo application where you store data in a file</li>
+        <li>Create a HTTP server in Rust, Golang, or Java</li>
+        <li>Learn about middlewares</li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>
